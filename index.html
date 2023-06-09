@@ -36,6 +36,15 @@
         text-decoration: none;
       }
     </style>
+    <script defer>
+      let input = '';
+      document.addEventListener('keypress', (event) => {
+        input += event.key;
+        if (input.includes('pepsi')) {
+          document.getElementById('coke').src = 'pepsi.gif';
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="bottom-right">
@@ -46,7 +55,7 @@
       </h1>
     </div>
     <div id="centred">
-      <img src="dietcoke.gif" alt="coke" height="384" width="480" />
+      <img src="dietcoke.gif" alt="coke" height="384" width="480" id="coke" />
     </div>
   </body>
 </html>
